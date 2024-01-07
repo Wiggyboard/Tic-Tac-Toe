@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <meta name="description" content="Tic-Tac-Toe">
+    <meta name="author" content="Scott Freedman">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Tic-Tac-Toe</h1>
+    </header>
+
+    <main>
+        <div id="options-bar"></div>
+        <div id="status-bar">
+            <div id="toggle-pnp-container">
+                <h5 id="toggle-pnp-title">PASS & PLAY</h5>
+                <div id="toggle-pnp" onclick="toggleHuman()">
+                    <img id="toggle-human" src="images/human.svg">
+                    <img id="toggle-on" src="images/bot.svg">
+                    <div id="toggle-pnp-switch"></div>
+                </div>
+            </div>
+            <div id="toggle-container">
+                <h5 id="toggle-title">FIRST TURN</h5>
+                <div id="toggle" onclick="toggleOStart()">
+                    <h1 id="toggle-o">O</h1>
+                    <h1 id="toggle-x">X</h1>
+                    <div id="toggle-switch"></div>
+                </div>
+            </div>
+
+            <h2 id="status">YOUR TURN</h2>
+
+            <div id="reset" onclick="reset()">
+                <img id="reset-icon" src="images/reset.svg">
+            </div>
+        </div>
+
+        <div id="grid">
+            <div class="square" id="1" onclick="placeX(event)"><img class="symbol" src=""></div>
+
+            <div class="square" id="2" onclick="placeX(event)"><img class="symbol" src=""></div>
+
+            <div class="square" id="3" onclick="placeX(event)"><img class="symbol" src="">
+                <div class="line" id="line-1"></div>
+            </div>
+
+            <div class="square" id="4" onclick="placeX(event)"><img class="symbol" src=""></div>
+
+            <div class="square" id="5" onclick="placeX(event)"><img class="symbol" src=""></div>
+
+            <div class="square" id="6" onclick="placeX(event)"><img class="symbol" src="">
+                <div class="line" id="line-2"></div>
+                <div class="line" id="line-8"></div>
+            </div>
+
+            <div class="square" id="7" onclick="placeX(event)"><img class="symbol" src="">
+                <div class="line" id="line-4"></div>
+            </div>
+
+            <div class="square" id="8" onclick="placeX(event)"><img class="symbol" src="">
+                <div class="line" id="line-5"></div>
+            </div>
+
+            <div class="square" id="9" onclick="placeX(event)"><img class="symbol" src="">
+                <div class="line" id="line-3"></div>
+                <div class="line" id="line-6"></div>
+                <div class="line" id="line-7"></div>
+            </div>
+        </div>
+
+        <div id="score-bar">
+            <h4 id="wins-title">WINS</h4>
+            <h4 id="draws-title">DRAWS</h4>
+            <h4 id="losses-title">LOSSES</h4>
+            <h4 id="wins">0</h4>
+            <h4 id="draws">0</h4>
+            <h4 id="losses">0</h4>
+        </div>
+
+    </main>
+
+    <footer></footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
